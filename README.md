@@ -4,4 +4,6 @@ Project 2 - Explore US Bikeshare Data
 
 Sources:
 - Udacity Classroom
-- Weekly Sessions with Ms. Yaqeen Al Mahdi 
+- Weekly Sessions with Ms. Yaqeen Al Mahdi
+
+Update 1
