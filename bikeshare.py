@@ -2,6 +2,8 @@ import time
 import pandas as pd
 import numpy as np
 
+# Programming for Data Science Nanodegree
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -60,19 +62,19 @@ def load_data(city, month, day):
     """
     # filter by city
     df = pd.read_csv(CITY_DATA[city.lower()])
-    
+
     #convert start and end time from string to date format
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['End Time'] = pd.to_datetime(df['End Time'])
-    
+
     #day month to columns
     df['day'] = df['Start Time'].dt.day_name()
     df['month'] = df['Start Time'].dt.month_name()
-    
+
     # filter by month
     if month != 'All':
         df = df[df['month'] == month]
-    
+
     #filter by day
     if day != 'All':
         df = df[df['day'] == day]
@@ -174,14 +176,14 @@ def user_stats(df):
     # TO DO: Display earliest, most recent, and most common year of birth
     earliest_birth = df['Birth Year'].min()
     print("The earlist year of birth is:\n{} \n".format(earliest_birth))
-    
+
     recent_birth = df['Birth Year'].max()
     print("The most recent year of birth is:\n{} \n".format(recent_birth))
-    
+
     popular_birth = df['Birth Year'].mode()[0]
     print("The most common year of birth is:\n{} \n".format(popular_birth))
-    
-    
+
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -190,22 +192,22 @@ def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
-        
+
         # Asking the user if wants to view more data
         row_start = 0
         row_end = 5
-        
+
         while True:
             raw_data = input('\nWould you like to see more data? Enter yes or no.\n')
             if raw_data.lower() == 'yes':
                 print('\nDisplaying rows from {} to {}:'.format(row_start+1, row_end))
                 print('\n', df.iloc[row_start : row_end])
                 row_start += 5
-                row_end += 5 
+                row_end += 5
                 continue
             else:
                 break
-            
+
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
