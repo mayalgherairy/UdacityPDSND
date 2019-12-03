@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 
 # Programming for Data Science Nanodegree
+# Written By: May Algherairy
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
