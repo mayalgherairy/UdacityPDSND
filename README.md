@@ -7,4 +7,5 @@ Sources:
 - Weekly Sessions with Ms. Yaqeen Al Mahdi
 
 Update 1
-Update 2 
+Update 2
+Update 3
