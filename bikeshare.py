@@ -4,6 +4,7 @@ import numpy as np
 
 # Programming for Data Science Nanodegree
 # Written By: May Algherairy
+# Udacity 2019
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
